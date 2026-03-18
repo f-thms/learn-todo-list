@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts("LOG: Executando Seed")
+return unless Rails.env.development?
+
+Category.find_or_create_by(Category::DEFAULT_PARAMS)
+puts("LOG: Sucesso ao executar Seed")
