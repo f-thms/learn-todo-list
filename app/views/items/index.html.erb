@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Items" %>
+
+<h1>Items</h1>
+
+<div id="items">
+  <table border="1">
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+    <% @items.each do |item| %>
+      <%= render item %>
+
+    <% end %>
+  </table>
+</div>
+</p>
+<%= link_to "New item", new_item_path %>
